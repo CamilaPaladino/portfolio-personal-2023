@@ -1,0 +1,1575 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+section[id] {
+    scroll-margin-top: 50px;
+}
+
+header {
+    background-color: #303841;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 0 auto;
+    position: fixed;
+    width: 97%;
+    z-index: 100;
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #EEEEEE;
+    font-family: 'monument_extendedregular';
+    font-size: 13px;
+    cursor: pointer;
+}
+
+header nav a:hover {
+    border-bottom: solid 1.5px #EEEEEE;
+}
+
+.open-menu, .close-menu {
+    display: none;
+}
+
+.splash{
+    display: flex;
+    background-color: rgb(58, 71, 80);
+    padding-top: 50px;
+    min-height: 100vh;
+    align-items: center;
+    margin-top: 0;
+    padding-top: 0%;
+}
+
+.img-splash{
+    width: 83%;
+}
+
+.img-splash img{
+    padding-top: 37px;
+    padding-left: 40px;
+}
+
+.title {
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #EEEEEE;
+    width: 80%;
+}
+
+.title h2 {
+    font-size: 120px;
+    font-family: 'monument_extendedultrabold';
+    line-height:100px;
+    margin:0;
+}
+
+.title h3 {
+    font-family: 'monument_extendedregular';
+    line-height: 20px;
+    font-size: 60px ;
+    color: rgba(238,238,238, 0.5);
+    margin-bottom: 30px;
+}
+
+.title .dev {
+    background-color: #EEEEEE;
+    color: #3A4750;
+    width: 770px;
+    font-family: 'univia_proregular';
+    height: 60px;
+    align-content: center;
+}
+
+.title .dev h1 {
+    padding-left: 380px;
+    font-size: 50px;
+    align-self: center;
+}
+
+.i-skill {
+    display: flex;
+    font-size: 60px;
+    color: rgba(238,238,238, 0.1);
+    padding-top: 20px;
+    justify-content: flex-end;
+}
+
+.i-skill i{
+    padding-right: 10px;
+}
+
+
+/*     SOBRE MI      */
+
+.sobreMiCont{
+    display:flex;
+}
+
+.sobreMi {
+    width: 800px;
+    margin: 30px 60px 30px 40px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulares {
+    font-family: 'monument_extendedregular';
+    font-size: 35px;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+.sobreMi p {
+    font-family: 'univia_proregular';
+    padding-bottom: 20px;
+}
+
+.sobreMi a {
+    background-color:#F6C90E;
+    border: none;
+    width: 170px;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-family: 'univia_proregular';
+    color: rgb(58, 71, 80);
+    text-align: center;
+    font-weight: 600;
+    align-items: center;
+    cursor:pointer;
+}
+
+.sobreMi span {
+    font-size: 11px;
+    margin-top: 3px;
+    margin-left: 20px;
+    color: #3A4750;
+    font-family: 'univia_proregular';
+
+}
+
+.random {
+    background-color: rgba(58, 71, 80,0.25);
+    margin-top: 114px;
+    margin-right: 30px;
+    height: 300px;
+    width: 400px;
+    text-align: center;
+    padding: 0px 30px;
+}
+
+
+.random h2 {
+    color: white;
+    font-family: 'univia_proregular';
+    margin-bottom: 0;
+    font-size: 22px;
+}
+
+#btnRazones {
+    background-color:#F6C90E;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-family: 'univia_proregular';
+    color: rgb(58, 71, 80);
+    font-weight: 600;
+    align-items: center;
+    cursor:pointer;
+    margin-top: 20px;
+}
+
+#razonesCont {
+    font-family: 'univia_proregular';
+    font-size: 20px;
+    padding: 10px;
+    text-transform: uppercase;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*     SKILLS      */
+.contSkill {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 40px;  
+    justify-content: space-around;
+
+}
+
+.skill{
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    height: auto;
+    margin: 15px 60px;
+}
+
+.skill h5 {
+    margin: 0px 5px;
+    font-family: 'univia_proregular';
+}
+
+.progressCont {
+    background-color: white;
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    display: flex;
+    height: 8px;
+    width: 150px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .40);
+    margin: 5px;
+}
+
+.progress{
+    background-color: #F6C90E;
+    height: 6px;
+    border-radius: 100px;
+    padding-right: 3px;
+}
+
+.load1{
+    animation: load1 3s normal forwards;
+}
+
+@keyframes load1 {
+    0% { width: 0; }
+    100% { width: 80%; }
+}
+
+.load2{
+    animation: load2 3s normal forwards;
+}
+
+@keyframes load2 {
+    0% { width: 0; }
+    100% { width: 65%; }
+}
+
+.load3{
+    animation: load3 3s normal forwards;
+}
+
+@keyframes load3 {
+    0% { width: 0; }
+    100% { width: 75%; }
+}
+
+.load4{
+    animation: load4 3s normal forwards;
+}
+
+@keyframes load4 {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+.load5{
+    animation: load5 3s normal forwards;
+}
+
+@keyframes load5 {
+    0% { width: 0; }
+    100% { width: 70%; }
+}
+
+.load6{
+    animation: load6 3s normal forwards;
+}
+
+@keyframes load6 {
+    0% { width: 0; }
+    100% { width: 90%; }
+}
+
+.load7{
+    animation: load7 3s normal forwards;
+}
+
+@keyframes load7 {
+    0% { width: 0; }
+    100% { width: 90%; }
+}
+
+.load8{
+    animation: load8 3s normal forwards;
+}
+
+@keyframes load8 {
+    0% { width: 0; }
+    100% { width: 60%; }
+}
+
+
+
+
+/*     PROYECTOS      */
+.proyectos {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EEEEEE;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+}
+
+.card {
+    display: flex;
+    width: 1135px;
+    height: 345px;
+    align-items: space-between;
+    margin-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 70px;
+    align-items: flex-end;
+    
+}
+.imgCard{
+    width: 700px;
+    margin: 0;
+    filter: grayscale(100%);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.imgCard:hover {
+    filter: grayscale(0%);
+}
+
+.descrip-card {
+    padding-left: 50px;
+    padding-right: 50px;
+    
+}
+
+.descrip-card h4 {
+    font-family: 'monument_extendedregular';
+    font-size: 30px;
+    border-bottom: solid 2px #F6C90E;
+    margin-bottom: 0%;
+    margin-top: 0;
+}
+
+.descrip-card p {
+    line-height: 19px;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-family: 'univia_proregular';
+}
+
+.tools i{
+    color: rgba(58,71,80, 0.5);
+    font-size: 30px;
+    padding-top: 20px;   
+}
+
+.btn-card {
+    margin-bottom: 13px;
+    margin-top: 60px;
+}
+
+.btn-card a {
+    padding: 9px;
+    text-decoration: none;
+    background-color:#303841;
+    font-style: normal;
+    font-size: 14px;
+    cursor: pointer;
+    color: #EEEEEE;
+    font-family: 'univia_proregular';
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.btn-card a i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn-card a:hover {
+    background-color: #43535e;
+}
+
+
+/*     FOOTER      */
+
+footer{
+    background-color: #303841;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 0;
+}
+
+.titulo{
+    font-family: 'monument_extendedregular';
+    font-size: 35px;
+    text-transform: uppercase;
+    margin: 0 auto;
+    color: white;
+    background-color: #303841;
+    padding-top: 20px;
+    text-align: center;
+}
+
+form  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 40px 40px 20px 40px;
+}
+
+form label {
+    color: white;
+    font-family: 'univia_proregular';
+    font-size: 20px;
+}
+
+form input {
+    border: none;
+    background-color: rgba(221, 224, 226, 0.25);
+    height: 40px;
+    width: 500px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+form textarea {
+    border: none;
+    background-color: rgba(221, 224, 226, 0.25);
+    height: 110px;
+    width: 500px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.btn {
+    background-color:#f6c90e;
+    border: none;
+    font-size: 18px;
+    width: 500px;
+    font-family: 'univia_proregular';
+    color: rgb(58, 71, 80);
+    font-weight: 600;
+    align-items: center;
+    cursor:pointer;
+    padding-bottom: 5px;
+}
+
+.btn:hover {
+    background-color:#fad954;
+  
+}
+
+#mensajeEnviado, #validacion {
+    margin-top: 5px;
+    text-align: center;
+    font-family: 'univia_proregular';
+    color: #EEEEEE;
+}
+
+.contacto {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+}
+
+footer {
+    display: flex;
+}
+
+.contacto h3{
+    font-family: 'univia_proregular';
+    font-size: 20px;
+    color: white;
+    font-weight: 200;
+    margin: 0;
+    padding-right: 15px;
+}
+
+footer .mailto{
+    font-family: 'univia_proregular';
+    font-size: 20px;
+    color: white;
+    font-weight: 200;
+    margin: 0;
+    padding-right: 15px;
+    text-align: center;
+}
+
+footer .mailto a{
+    color: #ffffff;
+    text-decoration: none ;
+}
+
+footer .mailto a:hover{
+    color: #f6c90e !important;
+    text-decoration: underline;
+}
+
+.contacto a {
+    font-size: 30px;
+    color: #EEEEEE;
+    margin-right: 10px;
+}
+
+.final {
+    background-color: #43535e;
+    display: flex;
+    width: 100%;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.final a {
+    font-family: 'univia_proregular';
+    color: #EEEEEE;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1270px) {
+    header{
+        width: 96%;
+    }
+    
+    .splash{
+        margin-top: 0;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .img-splash {
+        padding-left: 30px;
+
+    }
+    .img-splash img{
+        object-fit: cover;
+        margin: 0;
+        padding-left: 0;
+    }
+    
+    .title {
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .title h2 {
+        font-size: 100px;
+        line-height:80px;
+    }
+    
+    .title h3 {
+        font-size: 76px ;
+        margin-bottom: 38px;
+    }
+    
+    .title .dev {
+        width: 100%;
+        height: 50px;
+        text-align: end;
+        padding-right: 12px;
+    }
+    
+    .title .dev h1 {
+        margin-top: 10px;
+        padding-left: 0;
+        font-size: 30px;
+        align-self: flex-end;
+    }
+    
+    .i-skill {
+        font-size: 50px;
+        padding-top: 20px;
+        text-align: end;
+        padding-left: 0;
+    }
+    
+    /*     SOBRE MI      */
+    
+    .sobreMiCont{
+        display:flex;
+        justify-content: space-between;
+    }
+
+    .sobreMi {
+        width: 550px;
+        margin: 30px 60px 5px 40px;
+    }
+
+    .titulares {
+        font-size: 25px;
+        margin: 0 auto;
+    }
+
+    .sobreMi p {
+        padding-bottom: 20px;
+        font-size: 15px;
+    }
+
+    .random {
+        margin-top: 88px;
+        width: 300px;
+    }
+
+
+    /*     PROYECTOS      */
+
+    .card {
+        display: flex;
+        width: 1000px;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 15px;        
+    }
+
+    .imgCard{
+        width: 600px;
+    }
+
+
+    .descrip-card h4 {
+        font-size: 25px;
+    }
+
+    /*     FOOTER      */
+
+    .titulo{
+        font-size: 25px;
+    }
+
+    form  {
+        margin: 20px 40px 20px 40px;
+    }
+
+    form label {
+        font-size: 15px;
+    }
+
+    form input {
+        height: 30px;
+        width: 300px;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
+    form textarea {
+        height: 80px;
+        width: 300px;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 15px;
+        width: 300px;
+        padding-top: 5px;
+    }
+
+    #mensajeEnviado {
+        text-align: center;
+        font-size: 13px;
+    }
+
+}
+
+@media screen and (max-width: 1147px) {
+    header{
+        width: 96%;
+    }
+    
+    .splash{
+        padding-top: 0%;
+    }
+    
+    .img-splash {
+        padding-left: 0px;
+        
+    }
+    .img-splash img{
+        width: 350px;
+    }
+    
+    
+    .title h2 {
+        font-size: 90px;
+        line-height:80px;
+    }
+    
+    .title h3 {
+        font-size: 68px ;
+        margin-bottom: 38px;
+    }
+    
+    .title .dev {
+        width: 100%;
+        height: 50px;
+        text-align: end;
+        padding-right: 12px;
+    }
+    
+    .title .dev h1 {
+        margin-top: 10px;
+        padding-left: 0;
+        font-size: 30px;
+        align-self: flex-end;
+    }
+    
+    .i-skill {
+        font-size: 50px;
+        padding-top: 20px;
+        text-align: end;
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    header{
+        width: 94%;
+    }
+    
+    .splash{
+        padding-top: 0%;
+        flex-direction: column-reverse;
+        align-content: center;
+    }
+
+    .img-splash {
+        text-align: center;
+    }
+    
+    .img-splash img{
+        width: 270px;
+        margin-top:15px;
+    }
+
+    .title {
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .title h2 {
+        font-size: 90px;
+        line-height:80px;
+    }
+    
+    .title h3 {
+        font-size: 60px ;
+        margin-bottom: 38px;
+        margin-top: 15px;
+    }
+    
+    .title .dev {
+        width: 80%;
+        height: 50px;
+        text-align: end;
+        padding-right: 0px;
+        margin: auto;
+    }
+    
+    .title .dev h1 {
+        text-align: center;
+        margin-top: 10px;
+        padding-left: 0;
+        font-size: 30px;
+        align-self: flex-end;
+    }
+    
+    .i-skill {
+        width: 200px;
+        font-size: 45px;
+        padding-top: 20px;
+        text-align: end;
+        padding-left: 0;
+        justify-content: space-around;
+    }
+
+    /*     SOBRE MI      */
+    
+    .sobreMi {
+        width: 500px;
+        margin: 30px 60px 5px 40px;
+    }
+
+    .titulares {
+        font-size: 25px;
+        margin: 0 auto;
+    }
+
+    .sobreMi p {
+        font-size: 12px;
+    }
+
+    .random {
+        margin-top: 80px;
+        width: 350px;
+    }
+
+    .random h2 {
+        font-size: 18px;
+    }
+
+    #razonesCont {
+        font-size: 18px;
+    }
+
+        /*     SKILLS      */
+
+    .skill{
+        margin: 15px 20px;
+    }
+
+    /*     PROYECTOS      */
+
+    .proyectos {
+        display: flex;
+        text-align: center;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 450px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .card2 {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 70px;
+    }
+
+    .contImg {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .imgCard{
+        width: 400px;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .descrip-card {
+        width: 350px;
+        padding: 10px;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 619px) {
+    header{
+        width: 88%;
+    }
+    
+    nav{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        align-items: center;
+        background-color: #43535e;
+        height: 100vh;
+        font-size: 50px;
+        margin-left: 0;
+        margin-bottom: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+
+    nav a {
+        line-height: 40px;
+        padding-bottom: 0;
+    }
+
+    .open-menu, .close-menu {
+        display: block;
+    }
+
+    .open-menu {
+        border: none;
+        cursor: pointer;
+        justify-content: center;
+        margin-right: -16px;
+        align-self: center;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        font-size: 25px;
+    }
+
+    .close-menu {
+        border: none;
+        cursor: pointer;
+        align-self: flex-end;
+        margin-right: 25px;
+        margin-top: 11px;
+        margin-bottom: 15px;
+        font-size: 28px;
+    }
+
+    .menu_opened {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .splash {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 30px;
+    }
+
+    .img-splash img{
+        width: 200px;
+        padding-left: 0;
+    }
+    
+    .title h2 {
+        text-align: center;
+        font-size: 50px;
+        line-height:48px;
+    }
+    
+    .title h3 {
+        text-align: center;
+        font-size: 38px ;
+        margin-bottom: 15px;
+    }
+    
+    .title .dev {
+        width: 375px;
+        height: 50px;
+        text-align: end;
+        padding-right:0px;
+    }
+    
+    .title .dev h1 {
+        text-align: center;
+        margin-top: 10px;
+        padding-left: 0;
+        font-size: 30px;
+        align-self: center;
+    }
+    
+    .i-skill {
+        font-size: 50px;
+        padding-top: 20px;
+        text-align: center;
+        padding-left: 0;
+    }
+    
+    /*     SOBRE MI      */
+
+    .sobreMiCont{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sobreMi {
+        width: 350px;
+        margin: 30px;
+    }
+
+    .sobreMi a {
+        text-align: center;
+        align-self: center;
+    }
+    
+    .sobreMi span {
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .random {
+        width: 300px;
+        align-self: center;
+        margin: auto 0;
+        margin-top: 30px;
+    }
+
+            
+    /*     SKILLS      */
+    .contSkill {
+        margin-bottom: 20px;  
+    }
+
+    .skill{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70px;
+        margin: 15px 20px;
+    }
+
+    .skill h5 {
+        width: 100px;
+        font-size: 10px;
+        margin: 0px 5px;
+    }
+
+    .progressCont {
+        width: 100px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, .40);
+        margin: 5px;
+    }
+
+    .progress{
+        background-color: #F6C90E;
+        height: 6px;
+        border-radius: 100px;
+        padding-right: 3px;
+    }
+
+    /*     PROYECTOS      */
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 1000px;
+        height: 350px;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 15px;        
+    }
+
+    .card2 {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 70px;
+    }
+
+    .imgCard{
+        width: 400px;
+        align-self: center;
+    }
+
+    .descrip-card {
+        width: 350px;
+        padding: 10px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+}
+
+
+@media screen and (max-width: 438px) {
+    #home {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    header{
+        width: 87%;
+    }
+    
+    .splash {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 0px;
+    }
+
+    .title {
+        padding: 0px;
+    }
+    .img-splash img{
+        width: 200px;
+        padding-left: 0;
+        padding-top: 0px;
+    }
+    
+    .title h2 {
+        font-size: 40px;
+        line-height:40px;
+    }
+    
+    .title h3 {
+        font-size: 30px ;
+        margin-bottom: 7px;
+    }
+    
+    .title .dev {
+        width: 300px;
+        height: 50px;
+        text-align: end;
+        padding-right:0px;
+    }
+    
+    .title .dev h1 {
+        text-align: center;
+        margin-top: 10px;
+        padding-left: 0;
+        font-size: 30px;
+        align-self: center;
+    }
+    
+    .i-skill {
+        font-size: 50px;
+        padding-top: 0px;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .i-skill i {
+        font-size: 40px;
+    }
+    
+    /*     SOBRE MI      */
+
+    .sobreMi {
+        width: 280px;
+        margin: 30px;
+    }
+
+    .sobreMi a {
+        text-align: center;
+        align-self: center;
+    }
+    
+    .sobreMi span {
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .random {
+        width: 220px;
+        align-self: center;
+        margin: auto 0;
+        margin-top: 30px;
+    }
+
+            
+    /*     SKILLS      */
+    .contSkill {
+        margin-bottom: 20px;  
+    }
+
+    .skill{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70px;
+        margin: 15px 20px;
+    }
+
+    .skill h5 {
+        width: 100px;
+        font-size: 10px;
+        margin: 0px 5px;
+    }
+
+    .progressCont {
+        width: 100px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, .40);
+        margin: 5px;
+    }
+
+    .progress{
+        background-color: #F6C90E;
+        height: 6px;
+        border-radius: 100px;
+        padding-right: 3px;
+    }
+
+    /*     PROYECTOS      */
+
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card2 {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 20px;
+    }
+
+    .imgCard{
+        width: 280px;
+        align-self: center;
+    }
+
+    .descrip-card {
+        width: 280px;
+        padding: 10px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+        
+    /*     FOOTER      */
+
+
+    .titulo{
+        font-size: 25px;
+        padding-top: 20px;
+    }
+
+    form  {
+        display: flex;
+        margin: 20px 0px 20px 0px;
+    }
+
+    form label {
+        font-size: 12px;
+    }
+
+    form input {
+        height: 20px;
+        width: 200px;
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+
+    form textarea {
+        border: none;
+        background-color: rgba(221, 224, 226, 0.25);
+        height: 60px;
+        width: 200px;
+        margin-bottom: 20px;
+        font-size: 18px;
+
+    }
+
+    .btn {
+        padding:10px 15px;
+        font-size: 15px;
+        width: 200px;
+        height: 40px;
+        padding-bottom: 10px;
+    }
+
+    #mensajeEnviado {
+        text-align: center;
+        font-size: 9px;
+        margin:0px;
+    }
+
+    .contacto h3{
+        font-size: 15px;
+    }
+
+    .final a  i{
+        font-size: 8px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 375px ) {
+
+    header{
+        width: 82%;
+    }
+    
+    .splash {
+        height: 100vh;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 100px;
+    }
+
+    .title {
+        padding: 0px;
+    }
+    .img-splash img{
+        width: 200px;
+        padding-left: 0;
+        padding-top: 0px;
+        position: relative;
+        top: -120px;
+    }
+    
+    .title h2 {
+        font-size: 40px;
+        line-height:40px;
+        position: relative;
+        top: -120px;
+        
+    }
+    
+    .title h3 {
+        font-size: 30px ;
+        margin-bottom: 7px;
+        position: relative;
+        top: -120px;
+    }
+    
+    .title .dev {
+        width: 300px;
+        height: 50px;
+        text-align: end;
+        padding-right:0px;
+        position: relative;
+        top: -120px;
+    }
+    
+    .title .dev h1 {
+        text-align: center;
+        margin-top: 10px;
+        padding-left: 0;
+        font-size: 30px;
+        align-self: center;
+    }
+    
+    .i-skill {
+        font-size: 50px;
+        padding-top: 0px;
+        text-align: center;
+        padding-left: 0;
+        position: relative;
+        top: -120px;
+    }
+
+    .i-skill i {
+        font-size: 40px;
+    }
+    
+    /*     SOBRE MI      */
+
+    .sobreMi {
+        width: 280px;
+        padding-top: 90px;
+        margin: 30px;
+    }
+
+    .sobreMi a {
+        text-align: center;
+        align-self: center;
+    }
+    
+    .sobreMi span {
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .random {
+        width: 220px;
+        align-self: center;
+        margin: auto 0;
+        margin-top: 30px;
+    }
+
+            
+    /*     SKILLS      */
+    .contSkill {
+        margin-bottom: 20px;  
+    }
+
+    .skill{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70px;
+        margin: 15px 20px;
+    }
+
+    .skill h5 {
+        width: 100px;
+        font-size: 10px;
+        margin: 0px 5px;
+    }
+
+    .progressCont {
+        width: 100px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, .40);
+        margin: 5px;
+    }
+
+    .progress{
+        background-color: #F6C90E;
+        height: 6px;
+        border-radius: 100px;
+        padding-right: 3px;
+    }
+
+    /*     PROYECTOS      */
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card2 {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 20px;
+    }
+
+    .imgCard{
+        width: 280px;
+        align-self: center;
+    }
+
+    .descrip-card {
+        width: 280px;
+        padding: 10px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+        
+    /*     FOOTER      */
+
+
+    .titulo{
+        font-size: 25px;
+        padding-top: 20px;
+    }
+
+    form  {
+        display: flex;
+        margin: 20px 0px 20px 0px;
+    }
+
+    form label {
+        font-size: 12px;
+    }
+
+    form input {
+        height: 20px;
+        width: 200px;
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+
+    form textarea {
+        border: none;
+        background-color: rgba(221, 224, 226, 0.25);
+        height: 60px;
+        width: 200px;
+        margin-bottom: 20px;
+        font-size: 18px;
+
+    }
+
+    .btn {
+        padding:10px 15px;
+        font-size: 15px;
+        width: 200px;
+    }
+
+    .contacto h3{
+        font-size: 15px;
+    }
+
+    .final a  i{
+        font-size: 8px;
+    }
+
+}
+
+@media screen and (max-width: 375px ) {
+
+    header{
+        width: 82%;
+    }
+    
+    .splash {
+        height: 100vh;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 100px;
+    }
+
+    .title {
+        padding: 0px;
+    }
+    .img-splash img{
+        width: 200px;
+        padding-left: 0;
+        padding-top: 0px;
+        position: relative;
+        top: -120px;
+    }
+    
+    .title h2 {
+        font-size: 40px;
+        line-height:40px;
+        position: relative;
+        top: -120px;
+        
+    }
+    
+    .title h3 {
+        font-size: 30px ;
+        margin-bottom: 7px;
+        position: relative;
+        top: -120px;
+        align-content: center;
+    }
+    
+    .title .dev {
+        width: 200px;
+        height: 40px;
+        padding-right:0px;
+        position: relative;
+        top: -120px;
+    }
+    
+    .title .dev h1 {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 20px;
+        align-self: center;
+    }
+    
+    .i-skill {
+        font-size: 50px;
+        padding-top: 10px;
+        text-align: center;
+        padding-left: 0;
+        position: relative;
+        top: -120px;
+    }
+
+    .i-skill i {
+        font-size: 30px;
+    }
+
+}
