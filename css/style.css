@@ -7,96 +7,309 @@ body {
     overflow-x: hidden;
 }
 
-section[id] {
-    scroll-margin-top: 50px;
-}
-
-header {
-    background-color: #303841;
-    height: 50px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-top: 0 auto;
-    position: fixed;
-    width: 97%;
-    z-index: 100;
-}
-
-header nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #EEEEEE;
-    font-family: 'monument_extendedregular';
-    font-size: 13px;
-    cursor: pointer;
-}
-
-header nav a:hover {
-    border-bottom: solid 1.5px #EEEEEE;
-}
-
-.open-menu, .close-menu {
+.header.header-mobile {
     display: none;
 }
 
-.splash{
+.btnMenu {
+    width: 48px;
+    height: 48px;
+    padding: 8px 6px;
+    border-radius: 4px;
+    position: relative;
+    z-index: 1000;
     display: flex;
-    background-color: rgb(58, 71, 80);
-    padding-top: 50px;
-    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: 0;
-    padding-top: 0%;
+}
+
+.btnMenu.ver {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.btnMenu span {
+    width: 100%;
+    height: 2px;
+    background-color: #FFF;
+    display: block;
+    transition: .2s cubic-bezier(0, 0, 0, 1) all;
+    transform-origin: center;
+}
+
+.btnMenu span:nth-child(2) {
+    margin: 5px 0;
+}
+
+.btnMenu.on span:first-child {
+    transform: rotate(45deg) translateY(5px) translateX(5px);
+}
+
+.btnMenu.on span:nth-child(2) {
+    opacity: 0;
+}
+
+.btnMenu.on span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-5px) translateX(5px);
+}
+
+.menu-custom-mobile {
+    background-color: #303841;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    transform: translateY(-100%);
+    transition: all ease .8s;
+}
+
+.menu-custom-mobile.mostrar {
+    transform: translateY(0);
+}
+
+.menu-custom-mobile ul li a {
+    color: #ffffff;
+    font-size: 18px;
+    opacity: 0.6;
+    transition: all ease .2s;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.menu-custom-mobile ul li{
+    list-style: none;
+}
+
+.menu-custom-mobile ul li.active a {
+    opacity: 1;
+}
+
+.menu-custom-mobile ul li a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 1;
+}
+
+.menu-custom-mobile .nav-mobile {
+    padding: 40px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;    /* justify-content: center; */
+    opacity: 0;
+    transition: all ease .4s;
+    transition-delay: 0.8s;
+}
+
+.menu-custom-mobile .nav-mobile.mostrar {
+    opacity: 1;
+}
+
+.nav-mobile .subitem {
+    font-size: 16px;
+    margin-left: 15px;
+    padding-top: 0;
+    padding-bottom: 5px;
+}
+
+.header-mobile {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #303841;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-shadow: 1px 10px 16px -12px rgba(48, 56, 65, 0.75);
+    -webkit-box-shadow: 1px 10px 16px -12px rgba(48, 56, 65, 0.75);
+    -moz-box-shadow: 1px 10px 16px -12px rgba(48, 56, 65);
+}
+
+.header-mobile a img {
+    max-height: 40px !important;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(305deg) brightness(103%) contrast(101%);
+}
+
+.header-mobile.open {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+.nav-desktop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    padding: 10px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;    
+    z-index: 22;
+}
+
+.nav-desktop.scrollNav {
+    background-color: rgb(48, 56, 65);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    justify-content: flex-end;;
+    box-shadow: 1px 10px 16px -12px rgba(48, 56, 65, 0.75);
+    -webkit-box-shadow: 1px 10px 16px -12px rgba(48, 56, 65, 0.75);
+    -moz-box-shadow: 1px 10px 16px -12px rgba(48, 56, 65);
+}
+
+.nav-desktop .logo-header {
+    height: 60px;
+    display: none;
+}
+
+.nav-desktop .logo-header.mostrar {
+    display: flex;
+}
+
+.nav-desktop ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.nav-desktop ul li {
+    height: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-desktop ul li a {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 15px;
+    font-family: 'univia_proregular';
+}
+
+.nav-desktop ul li .nav-link.active {
+    font-weight: 700;
+}
+
+.nav-desktop ul li:not(:last-child) {
+    border-right: solid 1px var(--text-green) !important;
+}
+
+.nav-desktop ul li.br-0 {
+    border-right: 0 !important;
+}
+
+.nav-desktop ul li .nav-link[data-toggle="dropdown"] {
+    background-color: #011f21;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.nav-desktop .dropdown-menu {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    margin: 5px 0 0;
+    border-radius: 0;
+}
+
+.nav-desktop .dropdown-menu a {
+    padding: 6px 22px;
+    color: #fff;
+    background-color: #011f21;
+}
+
+.nav-desktop .dropdown-menu a:first-child {
+    border-bottom: solid 1px #fff;
+    border-radius: 4px 4px 0 0;
+}
+
+.nav-desktop .dropdown-menu a:last-child {
+    border-radius: 0 0 4px 4px;
+    border-bottom: solid 1px #fff;
+}
+
+.nav-desktop .dropdown-menu a:hover {
+    background-color: var(--green);
+}
+
+.nav-desktop.scrollNav .dropdown-menu {
+    padding: 0 10px;
+    margin-right: 45px;
+}
+
+
+/* section[id] {
+    scroll-margin-top: 50px;
+}
+ */
+
+#home{
+    background-color: rgb(58, 71, 80);
+    padding: 100px 60px 80px 60px;    
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .img-splash{
-    width: 83%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .img-splash img{
-    padding-top: 37px;
-    padding-left: 40px;
+    width: 100%;
+    max-width: 350px;
+    max-height: 100%;
 }
 
 .title {
     padding-top: 40px;
-    padding-left: 30px;
-    padding-right: 30px;
     color: #EEEEEE;
-    width: 80%;
+    width: 100%;
 }
 
 .title h2 {
-    font-size: 120px;
+    font-size: 5rem;
     font-family: 'monument_extendedultrabold';
-    line-height:100px;
-    margin:0;
+    line-height: 100%;    
+    margin:5px;
 }
 
 .title h3 {
     font-family: 'monument_extendedregular';
-    line-height: 20px;
-    font-size: 60px ;
+    line-height: 100%;
+    font-size: 3rem ;
     color: rgba(238,238,238, 0.5);
-    margin-bottom: 30px;
+    margin-bottom: 0;
 }
 
 .title .dev {
     background-color: #EEEEEE;
     color: #3A4750;
-    width: 770px;
+    width: 100%;
     font-family: 'univia_proregular';
-    height: 60px;
-    align-content: center;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 20px;
+    max-width: 600px;
 }
 
 .title .dev h1 {
-    padding-left: 380px;
-    font-size: 50px;
+    font-size: 1.7rem;
     align-self: center;
+    margin-bottom: 0;
 }
 
 .i-skill {
@@ -105,9 +318,12 @@ header nav a:hover {
     color: rgba(238,238,238, 0.1);
     padding-top: 20px;
     justify-content: flex-end;
+    width: 100%;
+    max-width: 600px;
+
 }
 
-.i-skill i{
+.i-skill i:not(:last-child){
     padding-right: 10px;
 }
 
@@ -116,12 +332,11 @@ header nav a:hover {
 
 .sobreMiCont{
     display:flex;
+    padding: 100px 60px 80px 60px; 
 }
 
-.sobreMi {
-    width: 800px;
-    margin: 30px 60px 30px 40px;
-    text-align: justify;
+.sobreMi{
+    max-width: 600px;
     display: flex;
     flex-direction: column;
 }
@@ -131,6 +346,12 @@ header nav a:hover {
     font-size: 35px;
     text-transform: uppercase;
     margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.sobreMi .titulares {
+    text-align: left !important;
+    margin-left: 0 !important;
 }
 
 .sobreMi p {
@@ -140,92 +361,53 @@ header nav a:hover {
 
 .sobreMi a {
     background-color:#F6C90E;
-    border: none;
+    border: solid 2px #f6c90e;
     width: 170px;
     padding: 10px 20px;
     font-size: 15px;
     font-family: 'univia_proregular';
-    color: rgb(58, 71, 80);
+    color: rgb(58, 71, 80) !important;
     text-align: center;
     font-weight: 600;
     align-items: center;
     cursor:pointer;
+    transition: all ease .3s;
+}
+
+.sobreMi a:hover{
+    background-color:#ffffff;
+    text-decoration: none !important;
+
 }
 
 .sobreMi span {
     font-size: 11px;
     margin-top: 3px;
-    margin-left: 20px;
     color: #3A4750;
     font-family: 'univia_proregular';
 
-}
-
-.random {
-    background-color: rgba(58, 71, 80,0.25);
-    margin-top: 114px;
-    margin-right: 30px;
-    height: 300px;
-    width: 400px;
-    text-align: center;
-    padding: 0px 30px;
-}
-
-
-.random h2 {
-    color: white;
-    font-family: 'univia_proregular';
-    margin-bottom: 0;
-    font-size: 22px;
-}
-
-#btnRazones {
-    background-color:#F6C90E;
-    border: none;
-    padding: 10px 20px;
-    font-size: 15px;
-    font-family: 'univia_proregular';
-    color: rgb(58, 71, 80);
-    font-weight: 600;
-    align-items: center;
-    cursor:pointer;
-    margin-top: 20px;
-}
-
-#razonesCont {
-    font-family: 'univia_proregular';
-    font-size: 20px;
-    padding: 10px;
-    text-transform: uppercase;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 
 /*     SKILLS      */
 .contSkill {
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 40px;  
-    justify-content: space-around;
-
+    flex-direction: column;
+    padding: 0px 60px 80px 60px; 
 }
 
-.skill{
-    display: flex;
-    flex-direction: column;
-    width: 180px;
-    height: auto;
-    margin: 15px 60px;
+.contSkill .skill{
+    margin-bottom: 15px;
+}
+
+.contSkill .col-lg-3.col-md-4.col-sm-12{
+    padding-left: 0 !important;
 }
 
 .skill h5 {
     margin: 0px 5px;
     font-family: 'univia_proregular';
+    font-size: 16px;
 }
 
 .progressCont {
@@ -235,29 +417,61 @@ header nav a:hover {
     align-items: center;
     display: flex;
     height: 8px;
-    width: 150px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, .40);
     margin: 5px;
 }
 
 .progress{
-    background-color: #F6C90E;
-    height: 6px;
+    background-color: #F6C90E !important;
+    height: 6px !important;
     border-radius: 100px;
     padding-right: 3px;
 }
+
 
 .load1{
     animation: load1 3s normal forwards;
 }
 
-@keyframes load1 {
-    0% { width: 0; }
-    100% { width: 80%; }
-}
-
 .load2{
     animation: load2 3s normal forwards;
+}
+.load2a{
+    animation: load2a 3s normal forwards;
+}
+.load2b{
+    animation: load2b 3s normal forwards;
+}
+.load2c{
+    animation: load2c 3s normal forwards;
+}
+
+.load2d{
+    animation: load2c 3s normal forwards;
+}
+
+.load3{
+    animation: load3 3s normal forwards;
+}
+.load4{
+    animation: load4 3s normal forwards;
+}
+.load5{
+    animation: load5 3s normal forwards;
+}
+.load6{
+    animation: load6 3s normal forwards;
+}
+.load7{
+    animation: load7 3s normal forwards;
+}
+.load8{
+    animation: load8 3s normal forwards;
+}
+
+@keyframes load1 {
+    0% { width: 0; }
+    100% { width: 90%; }
 }
 
 @keyframes load2 {
@@ -265,8 +479,24 @@ header nav a:hover {
     100% { width: 65%; }
 }
 
-.load3{
-    animation: load3 3s normal forwards;
+@keyframes load2a {
+    0% { width: 0; }
+    100% { width: 65%; }
+}
+
+@keyframes load2b {
+    0% { width: 0; }
+    100% { width: 65%; }
+}
+
+@keyframes load2c {
+    0% { width: 0; }
+    100% { width: 75%; }
+}
+
+@keyframes load2d {
+    0% { width: 0; }
+    100% { width: 70%; }
 }
 
 @keyframes load3 {
@@ -274,45 +504,30 @@ header nav a:hover {
     100% { width: 75%; }
 }
 
-.load4{
-    animation: load4 3s normal forwards;
-}
 
 @keyframes load4 {
     0% { width: 0; }
     100% { width: 100%; }
 }
 
-.load5{
-    animation: load5 3s normal forwards;
-}
 
 @keyframes load5 {
     0% { width: 0; }
     100% { width: 70%; }
 }
 
-.load6{
-    animation: load6 3s normal forwards;
-}
 
 @keyframes load6 {
     0% { width: 0; }
     100% { width: 90%; }
 }
 
-.load7{
-    animation: load7 3s normal forwards;
-}
 
 @keyframes load7 {
     0% { width: 0; }
     100% { width: 90%; }
 }
 
-.load8{
-    animation: load8 3s normal forwards;
-}
 
 @keyframes load8 {
     0% { width: 0; }
@@ -327,31 +542,32 @@ header nav a:hover {
     min-height: 100vh;
     width: 100%;
     background-color: #EEEEEE;
-    padding-top: 50px;
     display: flex;
+    padding: 100px 60px 80px 60px;
     flex-direction: column;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    justify-content: center;
-    align-content: center;
+    overflow: hidden;
 }
 
 .card {
     display: flex;
-    width: 1135px;
-    height: 345px;
-    align-items: space-between;
-    margin-left: 30px;
-    margin-top: 15px;
-    margin-bottom: 70px;
-    align-items: flex-end;
-    
+    width: 100%;
+    height: auto;   
+    padding: 60px; 
+    border: none !important;
+    border-radius: 0 !important;
+    margin-bottom: 20px;
+}
+
+
+.contImg{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 .imgCard{
-    width: 700px;
-    margin: 0;
+    max-width: 100%;
     filter: grayscale(100%);
-    transition: 0.3s;
+    transition: all ease 0.3s;
     cursor: pointer;
 }
 
@@ -359,49 +575,44 @@ header nav a:hover {
     filter: grayscale(0%);
 }
 
-.descrip-card {
-    padding-left: 50px;
-    padding-right: 50px;
-    
-}
-
 .descrip-card h4 {
     font-family: 'monument_extendedregular';
-    font-size: 30px;
+    font-size: 24px;
     border-bottom: solid 2px #F6C90E;
-    margin-bottom: 0%;
-    margin-top: 0;
+    margin-bottom: 5px;
+    line-height: 115%;
+    padding-bottom: 7px;
 }
 
 .descrip-card p {
-    line-height: 19px;
+    line-height: 130% !important;
     font-size: 15px;
     text-transform: capitalize;
     font-family: 'univia_proregular';
+    margin-bottom: 35px;
+}
+
+.tools{
+    margin-bottom: 20px;
 }
 
 .tools i{
-    color: rgba(58,71,80, 0.5);
-    font-size: 30px;
-    padding-top: 20px;   
+    color: rgba(58,71,80, 0.3);
+    font-size: 25px;
 }
+
 
 .btn-card {
-    margin-bottom: 13px;
-    margin-top: 60px;
-}
-
-.btn-card a {
-    padding: 9px;
+    padding: 8px 13px;
     text-decoration: none;
     background-color:#303841;
-    font-style: normal;
-    font-size: 14px;
+    font-size: 13px;
     cursor: pointer;
-    color: #EEEEEE;
-    font-family: 'univia_proregular';
+    color: #EEEEEE ;
+    font-family: 'monument_extendedregular';    text-transform: uppercase;
     cursor: pointer;
     margin-right: 5px;
+    transition: all ease .3s;
 }
 
 .btn-card a i {
@@ -409,1167 +620,347 @@ header nav a:hover {
     cursor: pointer;
 }
 
-.btn-card a:hover {
-    background-color: #43535e;
+.btn-card:hover {
+    background-color: #F6C90E;
+    color: #303841 !important;
+    text-decoration: none;
 }
 
 
-/*     FOOTER      */
+/*     CONTACTO      */
 
-footer{
+.contacto{
     background-color: #303841;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 35px 0;
+    padding: 100px 60px 80px 60px;
+}
+
+.contacto .titulares{
+    color: #ffffff !important;
 }
 
 .titulo{
     font-family: 'monument_extendedregular';
     font-size: 35px;
     text-transform: uppercase;
-    margin: 0 auto;
+    margin-bottom: 30px;
     color: white;
     background-color: #303841;
     padding-top: 20px;
-    text-align: center;
 }
 
 form  {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 40px 40px 20px 40px;
+    background-color: #eeeeee;
+    padding: 50px 40px;
 }
 
-form label {
-    color: white;
-    font-family: 'univia_proregular';
-    font-size: 20px;
-}
-
-form input {
-    border: none;
-    background-color: rgba(221, 224, 226, 0.25);
-    height: 40px;
-    width: 500px;
-    margin-bottom: 15px;
-    font-size: 18px;
-}
-
-form textarea {
-    border: none;
-    background-color: rgba(221, 224, 226, 0.25);
-    height: 110px;
-    width: 500px;
-    margin-bottom: 20px;
-    font-size: 18px;
-}
 
 .btn {
-    background-color:#f6c90e;
-    border: none;
-    font-size: 18px;
-    width: 500px;
+    background-color: #F6C90E !important;
+    border: solid 2px #f6c90e !important;
+    width: 120px !important;
+    padding: 8px 12px;
+    font-size: 14px !important;
     font-family: 'univia_proregular';
-    color: rgb(58, 71, 80);
+    color: rgb(58, 71, 80) !important;
+    text-align: center;
     font-weight: 600;
-    align-items: center;
-    cursor:pointer;
-    padding-bottom: 5px;
+    cursor: pointer;
+    transition: all ease .3s;
+    margin-right: 0;
 }
 
 .btn:hover {
-    background-color:#fad954;
+    background-color:#eeeeee !important;
   
 }
 
-#mensajeEnviado, #validacion {
-    margin-top: 5px;
-    text-align: center;
-    font-family: 'univia_proregular';
-    color: #EEEEEE;
+.form-control{
+    border: none !important;
+    border-radius: 0 !important;
+
 }
 
-.contacto {
+.form-control:focus{
+    box-shadow: none !important;
+    border: none;
+    outline: none;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.info h3{
+    color: #ffffff;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.info a, .info p{
+    color: #ffffff;
+    font-size: 17px;
+    transition: all ease .3s;
+    margin-bottom: 0 !important;
+}
+
+.info a:hover{
+    color: #F6C90E;
+    text-decoration: none !important;
+}
+
+
+.info .links{
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    border-bottom: solid 1px #ffffff;
+    max-width: 280px;
+}
 
+.info .links a{
+    margin-right: 10px;
+    width: 25px;
+    fill: rgba(238, 238, 238, 0.3);
+    transition: all ease .3s;
+}
+
+.info .links a:hover{
+    fill: #F6C90E;
 }
 
 footer {
     display: flex;
-}
-
-.contacto h3{
-    font-family: 'univia_proregular';
-    font-size: 20px;
-    color: white;
-    font-weight: 200;
-    margin: 0;
-    padding-right: 15px;
-}
-
-footer .mailto{
-    font-family: 'univia_proregular';
-    font-size: 20px;
-    color: white;
-    font-weight: 200;
-    margin: 0;
-    padding-right: 15px;
-    text-align: center;
-}
-
-footer .mailto a{
-    color: #ffffff;
-    text-decoration: none ;
-}
-
-footer .mailto a:hover{
-    color: #f6c90e !important;
-    text-decoration: underline;
-}
-
-.contacto a {
-    font-size: 30px;
-    color: #EEEEEE;
-    margin-right: 10px;
-}
-
-.final {
-    background-color: #43535e;
-    display: flex;
+    background-color: #303841;
+    padding: 15px 60px;
     width: 100%;
-    height: 30px;
-    justify-content: center;
-    align-items: center;
+    border-top: solid 1px #ffffff;
 }
 
-.final a {
-    font-family: 'univia_proregular';
-    color: #EEEEEE;
-    font-size: 15px;
+footer a{
+    text-align: center;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    text-transform: none !important;
+    font-size: 12px;
+    transition: all ease .3s;
+}
+
+footer a:hover{
+    color: #f6c90e !important;
     text-decoration: none;
 }
 
 
 
-
-
-
-
-
-
-
-@media screen and (max-width: 1270px) {
-    header{
-        width: 96%;
+@media screen and (max-width:991.5px){
+    .nav-desktop {
+        display: none;
     }
-    
-    .splash{
-        margin-top: 0;
-        width: 100vw;
+
+    .header.header-mobile {
         display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .img-splash {
-        padding-left: 30px;
-
-    }
-    .img-splash img{
-        object-fit: cover;
-        margin: 0;
-        padding-left: 0;
-    }
-    
-    .title {
-        padding-top: 10px;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .title h2 {
-        font-size: 100px;
-        line-height:80px;
-    }
-    
-    .title h3 {
-        font-size: 76px ;
-        margin-bottom: 38px;
-    }
-    
-    .title .dev {
-        width: 100%;
-        height: 50px;
-        text-align: end;
-        padding-right: 12px;
-    }
-    
-    .title .dev h1 {
-        margin-top: 10px;
-        padding-left: 0;
-        font-size: 30px;
-        align-self: flex-end;
-    }
-    
-    .i-skill {
-        font-size: 50px;
-        padding-top: 20px;
-        text-align: end;
-        padding-left: 0;
-    }
-    
-    /*     SOBRE MI      */
-    
-    .sobreMiCont{
-        display:flex;
-        justify-content: space-between;
     }
 
-    .sobreMi {
-        width: 550px;
-        margin: 30px 60px 5px 40px;
+    .menu-custom-mobile .nav-mobile {
+        padding: 95px 20px 10px 20px;
     }
 
-    .titulares {
-        font-size: 25px;
-        margin: 0 auto;
+    .menu-custom-mobile {
+        padding: 0;
+        height: 100vh !important;
     }
 
-    .sobreMi p {
-        padding-bottom: 20px;
-        font-size: 15px;
-    }
-
-    .random {
-        margin-top: 88px;
-        width: 300px;
-    }
-
-
-    /*     PROYECTOS      */
-
-    .card {
-        display: flex;
-        width: 1000px;
-        margin-left: 30px;
-        margin-right: 30px;
-        margin-top: 15px;        
-    }
-
-    .imgCard{
-        width: 600px;
-    }
-
-
-    .descrip-card h4 {
-        font-size: 25px;
-    }
-
-    /*     FOOTER      */
-
-    .titulo{
-        font-size: 25px;
-    }
-
-    form  {
-        margin: 20px 40px 20px 40px;
-    }
-
-    form label {
-        font-size: 15px;
-    }
-
-    form input {
-        height: 30px;
-        width: 300px;
-        margin-bottom: 10px;
-        font-size: 15px;
-    }
-
-    form textarea {
-        height: 80px;
-        width: 300px;
-        margin-bottom: 10px;
-        font-size: 15px;
-    }
-
-    .btn {
-        padding: 12px 20px;
-        font-size: 15px;
-        width: 300px;
-        padding-top: 5px;
-    }
-
-    #mensajeEnviado {
-        text-align: center;
-        font-size: 13px;
-    }
-
-}
-
-@media screen and (max-width: 1147px) {
-    header{
-        width: 96%;
-    }
-    
-    .splash{
-        padding-top: 0%;
-    }
-    
-    .img-splash {
-        padding-left: 0px;
-        
-    }
-    .img-splash img{
-        width: 350px;
-    }
-    
-    
-    .title h2 {
-        font-size: 90px;
-        line-height:80px;
-    }
-    
-    .title h3 {
-        font-size: 68px ;
-        margin-bottom: 38px;
-    }
-    
-    .title .dev {
-        width: 100%;
-        height: 50px;
-        text-align: end;
-        padding-right: 12px;
-    }
-    
-    .title .dev h1 {
-        margin-top: 10px;
-        padding-left: 0;
-        font-size: 30px;
-        align-self: flex-end;
-    }
-    
-    .i-skill {
-        font-size: 50px;
-        padding-top: 20px;
-        text-align: end;
-        padding-left: 0;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    header{
-        width: 94%;
-    }
-    
-    .splash{
-        padding-top: 0%;
-        flex-direction: column-reverse;
-        align-content: center;
-    }
-
-    .img-splash {
-        text-align: center;
-    }
-    
-    .img-splash img{
-        width: 270px;
-        margin-top:15px;
-    }
-
-    .title {
-        display: flex;
-        text-align: center;
-        align-items: center;
-    }
-    
-    .title h2 {
-        font-size: 90px;
-        line-height:80px;
-    }
-    
-    .title h3 {
-        font-size: 60px ;
-        margin-bottom: 38px;
-        margin-top: 15px;
-    }
-    
-    .title .dev {
-        width: 80%;
-        height: 50px;
-        text-align: end;
-        padding-right: 0px;
-        margin: auto;
-    }
-    
-    .title .dev h1 {
-        text-align: center;
-        margin-top: 10px;
-        padding-left: 0;
-        font-size: 30px;
-        align-self: flex-end;
-    }
-    
-    .i-skill {
-        width: 200px;
-        font-size: 45px;
-        padding-top: 20px;
-        text-align: end;
-        padding-left: 0;
-        justify-content: space-around;
-    }
-
-    /*     SOBRE MI      */
-    
-    .sobreMi {
-        width: 500px;
-        margin: 30px 60px 5px 40px;
-    }
-
-    .titulares {
-        font-size: 25px;
-        margin: 0 auto;
-    }
-
-    .sobreMi p {
-        font-size: 12px;
-    }
-
-    .random {
-        margin-top: 80px;
-        width: 350px;
-    }
-
-    .random h2 {
-        font-size: 18px;
-    }
-
-    #razonesCont {
-        font-size: 18px;
-    }
-
-        /*     SKILLS      */
-
-    .skill{
-        margin: 15px 20px;
-    }
-
-    /*     PROYECTOS      */
-
-    .proyectos {
-        display: flex;
-        text-align: center;
-    }
-
-    .card {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 450px;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
-    .card2 {
-        display: flex;
-        flex-direction: column-reverse;
-        margin-top: 70px;
-    }
-
-    .contImg {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .imgCard{
-        width: 400px;
-        align-self: center;
-        justify-self: center;
-    }
-
-    .descrip-card {
-        width: 350px;
-        padding: 10px;
-        text-align: center;
-        margin: 0 auto;
-    }
-}
-
-@media screen and (max-width: 619px) {
-    header{
-        width: 88%;
-    }
-    
-    nav{
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        align-items: center;
-        background-color: #43535e;
-        height: 100vh;
-        font-size: 50px;
-        margin-left: 0;
-        margin-bottom: 0;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s;
-    }
-
-    nav a {
-        line-height: 40px;
-        padding-bottom: 0;
-    }
-
-    .open-menu, .close-menu {
-        display: block;
-    }
-
-    .open-menu {
-        border: none;
-        cursor: pointer;
-        justify-content: center;
-        margin-right: -16px;
-        align-self: center;
-        margin-top: 20px;
-        margin-bottom: 15px;
-        font-size: 25px;
-    }
-
-    .close-menu {
-        border: none;
-        cursor: pointer;
-        align-self: flex-end;
-        margin-right: 25px;
-        margin-top: 11px;
-        margin-bottom: 15px;
-        font-size: 28px;
-    }
-
-    .menu_opened {
+    .menu-custom-mobile ul li a {
         opacity: 1;
-        pointer-events: all;
     }
 
-    .splash {
-        flex-direction: column-reverse;
-        align-items: center;
-        padding-top: 30px;
+    .header-ext .btnMenu.on .line-burguer,
+    .header-ext.change .line-burguer {
+        background-color: #ffffff !important;
     }
 
-    .img-splash img{
-        width: 200px;
-        padding-left: 0;
+    .header-ext .logo.on-logo {
+        filter: invert(100%) sepia(29%) saturate(0%) hue-rotate(141deg) brightness(104%) contrast(105%) !important;
     }
-    
+
+    .title h3{
+        text-align: center;
+        font-size: 2rem;
+    }
+
     .title h2 {
+        font-size: 3.5rem;
+        margin: 5px;
         text-align: center;
-        font-size: 50px;
-        line-height:48px;
     }
-    
+
+    .title .dev{
+        height: 40px;
+        justify-content: center;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .title .dev h1 {
+        font-size: 1.4rem;
+    }
+
+    .i-skill{
+        max-width: 400px;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .i-skill i{
+        font-size: 2rem;
+    }
+
+    #home .title{
+        margin-bottom: 30px;
+    }
+
+    .img-splash img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .titulares{
+        font-size: 25px;
+    }
+
+    .sobreMi p{
+        font-size: 15px;
+    }
+
+    .contSkill .titulares{
+        margin-left: 0 !important;
+    }
+}
+
+@media screen and (max-width:767.5px){
+    .descrip-card{
+        margin-bottom: 40px;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .contImg{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .card {
+        padding: 40px;
+    }
+
+    .card02 .row{
+        flex-direction: column-reverse;
+    }
+
+    form{
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    #home{
+        padding: 100px 30px 80px 30px;
+    }
+
+    .sobreMiCont,
+    .proyectos,
+    .contacto{
+        padding: 60px 30px 50px 30px;
+    }
+
+    .contSkill {
+        padding: 15px 30px 80px 30px;
+    }
+
+
+    .sobreMiCont .skill, 
+    .sobreMiCont .col-lg-3,
+    .sobreMiCont .col-sm-12,
+    .sobreMiCont .col-md-4,
+    .contacto .col-lg-6,
+    .contacto .col-md-6,
+    .contacto .col-sm-12{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .header-mobile{
+        padding: 0 30px;
+    }
+
+    form {
+        padding: 25px 15px;
+    }
+
     .title h3 {
-        text-align: center;
-        font-size: 38px ;
+        font-size: 1.2rem;
+    }
+
+    .title h2 {
+        font-size: 2.5rem;
+    }
+
+    .title .dev h1 {
+        font-size: 1.2rem;
+    }
+
+    .title .dev {
+        height: 30px;
+    }
+
+    .i-skill i {
+        font-size: 30px;
+    }
+
+    .img-splash img {
+        width: 100%;
+        max-width: 180px;
+    }
+
+    .titulares {
+        font-size: 22px;
         margin-bottom: 15px;
     }
-    
-    .title .dev {
-        width: 375px;
-        height: 50px;
-        text-align: end;
-        padding-right:0px;
-    }
-    
-    .title .dev h1 {
-        text-align: center;
-        margin-top: 10px;
-        padding-left: 0;
-        font-size: 30px;
-        align-self: center;
-    }
-    
-    .i-skill {
-        font-size: 50px;
-        padding-top: 20px;
-        text-align: center;
-        padding-left: 0;
-    }
-    
-    /*     SOBRE MI      */
 
-    .sobreMiCont{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .sobreMi {
-        width: 350px;
-        margin: 30px;
+    .sobreMi p {
+        font-size: 14px;
     }
 
     .sobreMi a {
-        text-align: center;
-        align-self: center;
-    }
-    
-    .sobreMi span {
-        text-align: center;
-        margin-left: 0px;
+        padding: 8px 16px;
+        font-size: 14px;
     }
 
-    .random {
-        width: 300px;
-        align-self: center;
-        margin: auto 0;
-        margin-top: 30px;
-    }
-
-            
-    /*     SKILLS      */
-    .contSkill {
-        margin-bottom: 20px;  
-    }
-
-    .skill{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 70px;
-        margin: 15px 20px;
-    }
-
-    .skill h5 {
-        width: 100px;
-        font-size: 10px;
-        margin: 0px 5px;
-    }
-
-    .progressCont {
-        width: 100px;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, .40);
-        margin: 5px;
-    }
-
-    .progress{
-        background-color: #F6C90E;
-        height: 6px;
-        border-radius: 100px;
-        padding-right: 3px;
-    }
-
-    /*     PROYECTOS      */
-
-    .card {
-        display: flex;
-        flex-direction: column;
-        width: 1000px;
-        height: 350px;
-        margin-left: 30px;
-        margin-right: 30px;
-        margin-top: 15px;        
-    }
-
-    .card2 {
-        display: flex;
-        flex-direction: column-reverse;
-        margin-top: 70px;
-    }
-
-    .imgCard{
-        width: 400px;
-        align-self: center;
-    }
-
-    .descrip-card {
-        width: 350px;
-        padding: 10px;
-        text-align: center;
-        margin: 0 auto;
-    }
-
-}
-
-
-@media screen and (max-width: 438px) {
-    #home {
-        height: 100vh;
-        width: 100vw;
-    }
-
-    header{
-        width: 87%;
-    }
-    
-    .splash {
-        flex-direction: column-reverse;
-        align-items: center;
-        padding-top: 0px;
-    }
-
-    .title {
-        padding: 0px;
-    }
-    .img-splash img{
-        width: 200px;
-        padding-left: 0;
-        padding-top: 0px;
-    }
-    
-    .title h2 {
-        font-size: 40px;
-        line-height:40px;
-    }
-    
-    .title h3 {
-        font-size: 30px ;
-        margin-bottom: 7px;
-    }
-    
-    .title .dev {
-        width: 300px;
-        height: 50px;
-        text-align: end;
-        padding-right:0px;
-    }
-    
-    .title .dev h1 {
-        text-align: center;
-        margin-top: 10px;
-        padding-left: 0;
-        font-size: 30px;
-        align-self: center;
-    }
-    
-    .i-skill {
-        font-size: 50px;
-        padding-top: 0px;
-        text-align: center;
-        padding-left: 0;
-    }
-
-    .i-skill i {
-        font-size: 40px;
-    }
-    
-    /*     SOBRE MI      */
-
-    .sobreMi {
-        width: 280px;
-        margin: 30px;
-    }
-
-    .sobreMi a {
-        text-align: center;
-        align-self: center;
-    }
-    
-    .sobreMi span {
-        text-align: center;
-        margin-left: 0px;
-    }
-
-    .random {
-        width: 220px;
-        align-self: center;
-        margin: auto 0;
-        margin-top: 30px;
-    }
-
-            
-    /*     SKILLS      */
-    .contSkill {
-        margin-bottom: 20px;  
-    }
-
-    .skill{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 70px;
-        margin: 15px 20px;
-    }
-
-    .skill h5 {
-        width: 100px;
-        font-size: 10px;
-        margin: 0px 5px;
-    }
-
-    .progressCont {
-        width: 100px;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, .40);
-        margin: 5px;
-    }
-
-    .progress{
-        background-color: #F6C90E;
-        height: 6px;
-        border-radius: 100px;
-        padding-right: 3px;
-    }
-
-    /*     PROYECTOS      */
-
-    .card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .card2 {
-        display: flex;
-        flex-direction: column-reverse;
-        margin-top: 20px;
-    }
-
-    .imgCard{
-        width: 280px;
-        align-self: center;
-    }
-
-    .descrip-card {
-        width: 280px;
-        padding: 10px;
-        text-align: center;
-        margin: 0 auto;
-    }
-
-        
-    /*     FOOTER      */
-
-
-    .titulo{
-        font-size: 25px;
-        padding-top: 20px;
-    }
-
-    form  {
-        display: flex;
-        margin: 20px 0px 20px 0px;
-    }
-
-    form label {
-        font-size: 12px;
-    }
-
-    form input {
-        height: 20px;
-        width: 200px;
-        margin-bottom: 10px;
-        font-size: 13px;
-    }
-
-    form textarea {
-        border: none;
-        background-color: rgba(221, 224, 226, 0.25);
-        height: 60px;
-        width: 200px;
-        margin-bottom: 20px;
+    .descrip-card h4{
         font-size: 18px;
-
+    }
+    
+    .descrip-card p{
+        font-size: 14px;
     }
 
-    .btn {
-        padding:10px 15px;
-        font-size: 15px;
-        width: 200px;
-        height: 40px;
-        padding-bottom: 10px;
+    .btn-card{
+        font-size: 11px;
     }
 
-    #mensajeEnviado {
-        text-align: center;
-        font-size: 9px;
-        margin:0px;
+    .card{
+        padding: 30px;
     }
 
-    .contacto h3{
-        font-size: 15px;
-    }
-
-    .final a  i{
-        font-size: 8px;
-    }
 
 
 }
 
-
-@media screen and (max-width: 375px ) {
-
-    header{
-        width: 82%;
-    }
-    
-    .splash {
-        height: 100vh;
-        flex-direction: column-reverse;
-        align-items: center;
-        padding-top: 100px;
-    }
-
-    .title {
-        padding: 0px;
-    }
-    .img-splash img{
-        width: 200px;
-        padding-left: 0;
-        padding-top: 0px;
-        position: relative;
-        top: -120px;
-    }
-    
-    .title h2 {
-        font-size: 40px;
-        line-height:40px;
-        position: relative;
-        top: -120px;
-        
-    }
-    
-    .title h3 {
-        font-size: 30px ;
-        margin-bottom: 7px;
-        position: relative;
-        top: -120px;
-    }
-    
-    .title .dev {
-        width: 300px;
-        height: 50px;
-        text-align: end;
-        padding-right:0px;
-        position: relative;
-        top: -120px;
-    }
-    
-    .title .dev h1 {
-        text-align: center;
-        margin-top: 10px;
-        padding-left: 0;
-        font-size: 30px;
-        align-self: center;
-    }
-    
-    .i-skill {
-        font-size: 50px;
-        padding-top: 0px;
-        text-align: center;
-        padding-left: 0;
-        position: relative;
-        top: -120px;
-    }
-
-    .i-skill i {
-        font-size: 40px;
-    }
-    
-    /*     SOBRE MI      */
-
-    .sobreMi {
-        width: 280px;
-        padding-top: 90px;
-        margin: 30px;
-    }
-
-    .sobreMi a {
-        text-align: center;
-        align-self: center;
-    }
-    
-    .sobreMi span {
-        text-align: center;
-        margin-left: 0px;
-    }
-
-    .random {
-        width: 220px;
-        align-self: center;
-        margin: auto 0;
-        margin-top: 30px;
-    }
-
-            
-    /*     SKILLS      */
-    .contSkill {
-        margin-bottom: 20px;  
-    }
-
-    .skill{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 70px;
-        margin: 15px 20px;
-    }
-
-    .skill h5 {
-        width: 100px;
-        font-size: 10px;
-        margin: 0px 5px;
-    }
-
-    .progressCont {
-        width: 100px;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, .40);
-        margin: 5px;
-    }
-
-    .progress{
-        background-color: #F6C90E;
-        height: 6px;
-        border-radius: 100px;
-        padding-right: 3px;
-    }
-
-    /*     PROYECTOS      */
-    .card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .card2 {
-        display: flex;
-        flex-direction: column-reverse;
-        margin-top: 20px;
-    }
-
-    .imgCard{
-        width: 280px;
-        align-self: center;
-    }
-
-    .descrip-card {
-        width: 280px;
-        padding: 10px;
-        text-align: center;
-        margin: 0 auto;
-    }
-
-        
-    /*     FOOTER      */
-
-
-    .titulo{
-        font-size: 25px;
-        padding-top: 20px;
-    }
-
-    form  {
-        display: flex;
-        margin: 20px 0px 20px 0px;
-    }
-
-    form label {
-        font-size: 12px;
-    }
-
-    form input {
-        height: 20px;
-        width: 200px;
-        margin-bottom: 10px;
-        font-size: 13px;
-    }
-
-    form textarea {
-        border: none;
-        background-color: rgba(221, 224, 226, 0.25);
-        height: 60px;
-        width: 200px;
-        margin-bottom: 20px;
-        font-size: 18px;
-
-    }
-
-    .btn {
-        padding:10px 15px;
-        font-size: 15px;
-        width: 200px;
-    }
-
-    .contacto h3{
-        font-size: 15px;
-    }
-
-    .final a  i{
-        font-size: 8px;
-    }
-
-}
-
-@media screen and (max-width: 375px ) {
-
-    header{
-        width: 82%;
-    }
-    
-    .splash {
-        height: 100vh;
-        flex-direction: column-reverse;
-        align-items: center;
-        padding-top: 100px;
-    }
-
-    .title {
-        padding: 0px;
-    }
-    .img-splash img{
-        width: 200px;
-        padding-left: 0;
-        padding-top: 0px;
-        position: relative;
-        top: -120px;
-    }
-    
-    .title h2 {
-        font-size: 40px;
-        line-height:40px;
-        position: relative;
-        top: -120px;
-        
-    }
-    
-    .title h3 {
-        font-size: 30px ;
-        margin-bottom: 7px;
-        position: relative;
-        top: -120px;
-        align-content: center;
-    }
-    
-    .title .dev {
-        width: 200px;
-        height: 40px;
-        padding-right:0px;
-        position: relative;
-        top: -120px;
-    }
-    
-    .title .dev h1 {
-        text-align: center;
-        margin-top: 10px;
-        font-size: 20px;
-        align-self: center;
-    }
-    
-    .i-skill {
-        font-size: 50px;
-        padding-top: 10px;
-        text-align: center;
-        padding-left: 0;
-        position: relative;
-        top: -120px;
-    }
-
-    .i-skill i {
-        font-size: 30px;
-    }
-
-}

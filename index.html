@@ -6,125 +6,163 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Camila Paladino - Web Developer</title>
         <meta name="description" content="Portfolio profesional. Curriculum Vitae, Proyectos, Contacto">
-        <meta name="keywords" content="Portfolio, Desarrollo Web, Developer, UX, Camila Paladino, Proyectos, CSS, HTML, JavaScript, Github, Web, Diseño de interfaz, ">
+        <meta name="keywords" content="Portfolio, Desarrollo Web, Developer, UX/UI, Camila Paladino, Proyectos, CSS, HTML, JavaScript, Github, Web, Diseño de interfaz ">
+        <!--CSS-->
+        <link rel="stylesheet" href="css/style.css">    
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <!--share Facebook-->
+        <meta property="og:url" content="https://camila-paladino-dev.netlify.app">
+        <meta property="og:type" content="website">
         <meta property="og:title" content="Camila Paladino - Web Developer">
         <meta property="og:description" content="Portfolio profesional. Curriculum Vitae, Proyectos, Contacto">
-        <meta property="og:type" content="Portfolio">
-        <meta property="og:image" content="assets/share.png">
-        <meta property="og:author" content="Camila Paladino">
+        <meta property="og:image" content="https://camila-paladino-dev.netlify.app/assets/images/og.png">
         <!--share Twitter-->
-        <meta property="twitter:title" content="Camila Paladino - Web Developer">
-        <meta property="twitter:description" content="Portfolio profesional. Curriculum Vitae, Proyectos, Contacto">
-        <meta property="twitter:type" content="Portfolio">
-        <meta property="twitter:image" content="assets/share.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="https://camila-paladino-dev.netlify.app">
+        <meta property="twitter:url" content="https://camila-paladino-dev.netlify.app">
+        <meta name="twitter:title" content="Camila Paladino - Web Developer">
+        <meta name="twitter:description" content="Portfolio profesional. Curriculum Vitae, Proyectos, Contacto">
+        <meta name="twitter:image" content="https://camila-paladino-dev.netlify.app/assets/images/og.png">
         <!--Favicon-->
-        <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
-        <!--CSS-->
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="apple-touch-icon" href="assets/images/favicon/60.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/76.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/120.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/152.png">
+        <link rel="icon" type="image/png" href="assets/images/favicon/favicon.png">
         <!--FONTS-->
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <script src="https://kit.fontawesome.com/7a27d4ce79.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="assets/fonts/stylesheet.css" type="text/css" charset="utf-8" />
     </head>
     <body>
+        <nav class="nav-desktop">
+            <ul>
+                <li><a class="nav-link" href="#home">Home</a></li>
+                <li><a class="nav-link" href="#sobremi">Sobre Mi</a></li>
+                <li><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                <li><a class="nav-link" href="#contacto">Contactame</a></li>   
+            </ul>
+        </nav>
+        <div class="header header-mobile">
+            <a href="#" class="btnMenu">
+                <span class="line-burguer"></span>
+                <span class="line-burguer"></span>
+                <span class="line-burguer"></span>
+            </a>
+        </div>
+        <div class="menu-custom-mobile">
+            <nav class="nav-mobile">
+                <ul class="mobile-ul">
+                    <li><a class="nav-link link-mobile" href="#home">Home</a></li>
+                    <li><a class="nav-link link-mobile" href="#sobremi">Sobre Mi</a></li>
+                    <li><a class="nav-link link-mobile" href="#proyectos">Proyectos</a></li>
+                    <li><a class="nav-link link-mobile" href="#contacto">Contactame</a></li>   
+                </ul>
+            </nav>
+        </div>    
+    
         <section id="home">
-            <header >
-                <button class="open-menu" aria-label="Abrir menú" alt="Abrir menú"><i class="fa-solid fa-bars"></i></button>
-                <nav class="nav">
-                    <button class="close-menu" aria-label="Cerrar menú" alt="Cerrar menú"><i class="fa-solid fa-xmark"></i></button>
-                    <a href="#home" alt="Sección home">HOME</a>
-                    <a href="#sobremi" alt="Sección Sobre Mi">SOBRE MI</a>
-                    <a href="#proyectos" alt="Sección Proyectos">PROYECTOS</a>
-                    <a href="#contacto" alt="Sección contacto">CONTACTAME</a>
-                </nav>
-            </header>
-            <section class="splash">
-                <div class="title">
+            <div class="splash row m-0 w-100">
+                <div class="title p-0 col-lg-7 col-md-12 col-sm-12">
                     <h3>Hola, soy</h3>
                     <h2>CAMILA <br> PALADINO</h2>
                     <div class="dev">
                         <h1>Web Developer</h1>
                     </div>
                     <div class="i-skill">
-                        <i class="fa-brands fa-sass"></i>
                         <i class="fa-brands fa-html5"></i>
                         <i class="fa-brands fa-css3-alt"></i>
-                        <i class="fa-brands fa-js"></i>
+                        <i class="fa-brands fa-sass"></i>
                         <i class="fa-brands fa-bootstrap"></i>
+                        <i class="fa-brands fa-js"></i>
+                        <i class="fa-brands fa-php"></i>
                     </div>
                 </div>
-                <div class="img-splash">
-                    <img src="assets/PELO.gif" alt="">
+                <div class="img-splash col-lg-5 col-md-12 col-sm-12">
+                    <img src="assets/images/pelo.gif" alt="">
                 </div>
-            </section>
+            </div>
         </section>
 
         <section class="sobreMiCont" id="sobremi">
             <div class="sobreMi" data-aos="fade-botton">
-                <h2 class="titulares">Sobre Mi </h2>
-                <p>Luego de trabajar por casi 5 años en Salud, decidí iniciar mi capacitación en Desarrollo Web. Profesión que siempre llamó mi atención y me pareció fascinante. 
-                    Cuento con manejo de <i>HTML</i>, <i>CSS</i> y <i>JavaScript</i>, como así también de Pre-procesadores  y  Frameworks  como <i>Sass</i> y <i>Bootstrap</i> respectivamente. Actualmente continúo mi aprendizaje en <i>JavaScript</i> con la incorporación de <i>React</i>. <br><br>
-                    Mi personalidad metódica, detallista y observadora ayudan a lo que llamo mi <b>PUNTO FUERTE: El diseño de interfaces </b>desde su planteamiento original bajo los Fundamentos de Experiencia de Usuario (<i>UX</i>) y su maquetación (<i>Figma</i>); como así también el diseño de sus piezas gráficas (<i>Adobe Illustrator, Photoshop o Premiere</i>).
+                <h2 class="titulares" data-aos="fade-botton">Sobre Mi </h2>
+                <p>Me enfoco en el diseño web y desarrollo Frontend de tu sitio. Partiendo desde los fundamentos de experiencia de usuario y uso de interfaces; optimización SEO para su posicionamiento, y la adaptación en todos los tamaños de dispositivos. 
                 </p>
-                <a href="assets/CVpag.pdf" download="CV CAMILA PALADINO DEVELOPER.pdf" target="_blank">DESCARGAR CV</a>
+                <a href="assets/download/cv2024.pdf" download="CV CAMILA PALADINO DEVELOPER.pdf" target="_blank">DESCARGAR CV</a>
                 <span>Haceme caso, lo vas a necesitar 😉</span>
             </div>
-
-            <div class="random" data-aos="fade-botton">
-                <h2>Razones por las que deberías tenerme en tu equipo:</h2>
-                <div id="razonesCont"></div>
-                <button id="btnRazones">Click aquí para averiguarlo</button>
-            </div>
         </section>
+        
+        <div class="contSkill ">
+            <h2 class="titulares mb-5" data-aos="fade-botton">Skills técnicas </h2>
+            <div class="row m-0 w-100">
+                <div class="skill col-lg-3 col-md-4 col-sm-12">
+                    <h5>HTML / CSS</h5>
+                    <div class="progressCont">
+                        <div class="progress load1"></div>
+                    </div>
+                </div>
+                <div class="skill col-lg-3 col-md-4 col-sm-12">
+                    <h5>Sass</h5>
+                    <div class="progressCont">
+                        <div class="progress load2"></div>
+                    </div>
+                </div>
+                <div class="skill col-lg-3 col-md-4 col-sm-12">
+                    <h5>JavaScript</h5>
+                    <div class="progressCont">
+                        <div class="progress load2a"></div>
+                    </div>
+                </div>
+                <div class="skill col-lg-3 col-md-4 col-sm-12">
+                    <h5>PHP</h5>
+                    <div class="progressCont">
+                        <div class="progress load2b"></div>
+                    </div>
+                </div>
+                <div class="skill col-lg-3 col-md-4 col-sm-12">
+                    <h5>UX/UI</h5>
+                    <div class="progressCont">
+                        <div class="progress load2d"></div>
+                    </div>
+                </div>
 
-        <div class="contSkill">
-            <div class="skill">
-                <h5>HTML / CSS</h5>
-                <div class="progressCont">
-                    <div class="progress load1"></div>
+                <div class="skill col-lg-3 col-md-4 col-sm-12">
+                    <h5>Jquery</h5>
+                    <div class="progressCont">
+                        <div class="progress load2c"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="skill">
-                <h5>Sass</h5>
-                <div class="progressCont">
-                    <div class="progress load2"></div>
+                <div class="skill col-lg-3 col-md-4 col-sm-12">
+                    <h5>GitHub</h5>
+                    <div class="progressCont">
+                        <div class="progress load3"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="skill">
-                <h5>GitHub</h5>
-                <div class="progressCont">
-                    <div class="progress load3"></div>
+                <div class="skill col-lg-3 col-md-4 col-sm-12">
+                    <h5>Adobe Photoshop</h5>
+                    <div class="progressCont">
+                        <div class="progress load5"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="skill">
-                <h5>Dropbox / Drive</h5>
-                <div class="progressCont">
-                    <div class="progress load4"></div>
+                <div class="skill col-lg-3 col-md-4 col-sm-12">
+                    <h5>Adobe Illustrator</h5>
+                    <div class="progressCont">
+                        <div class="progress load6"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="skill">
-                <h5>Adobe Photoshop</h5>
-                <div class="progressCont">
-                    <div class="progress load5"></div>
+                <div class="skill col-lg-3 col-md-4 col-sm-12">
+                    <h5>Adobe Premiere</h5>
+                    <div class="progressCont">
+                        <div class="progress load7"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="skill">
-                <h5>Adobe Illustrator</h5>
-                <div class="progressCont">
-                    <div class="progress load6"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <h5>Adobe Premiere</h5>
-                <div class="progressCont">
-                    <div class="progress load7"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <h5>Figma</h5>
-                <div class="progressCont">
-                    <div class="progress load8"></div>
+                <div class="skill col-lg-3 col-md-4 col-sm-12">
+                    <h5>Figma</h5>
+                    <div class="progressCont">
+                        <div class="progress load8"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -132,152 +170,191 @@
 
         <section class="proyectos" id="proyectos">
             <h2 class="titulares text-start">Proyectos</h2>
-            <div class="card card2" data-aos="fade-botton">
-                <div class="descrip-card">
-                    <h4>DASHBOARD APP CULTIVO</h4>
-                    <div class="tools">
-                        <i class="fa-brands fa-html5"></i>
-                        <i class="fa-brands fa-css3-alt"></i>
-                        <i class="fa-brands fa-js-square"></i>
+            <div class="card" data-aos="fade-left">
+                <div class="row w-100 m-0">
+                    <div class="descrip-card col-lg-6 col-md-6 col-sm-12">
+                        <h4>LANDING PAGE<br>INTRAPRODE</h4>
+                        <div class="tools">
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-css3-alt"></i>
+                            <i class="fa-brands fa-js-square"></i>
+                        </div>
+                        <p>Maquetación web responsive para venta de aplicativo web. <br>*Diseño y contenidos by Naiades</p>
+                        <a class="btn-card" href="https://www.intraprode.com.ar/" target="_blank">Sitio Web</a>
                     </div>
-                    <p><i>Diseño, maquetación y Desarrollo de Dashboard para App de Cultivo.</i>
-                    </p>
-
-                    <div class="btn-card">
-                        <a href="https://www.behance.net/gallery/144889393/Dashboard-App-para-Cultivo" target="_blank"><i class="fa-brands fa-behance"></i></a>
-                    </div>
-                </div>
-                <div class="contImg">
-                    <img class="imgCard" src="assets/dashboard.png" alt="">
-                </div>            
-            </div>
-            <div class="card card1" data-aos="fade-botton">
-                <div class="contImg">
-                    <img class="imgCard" src="assets/zapa.png" alt="">
-                </div>
-                <div class="descrip-card">
-                    <h4>ZAPADIE ROCK </h4>
-                    <div class="tools">
-                        <i class="fa-brands fa-html5"></i>
-                        <i class="fa-brands fa-bootstrap"></i>
-                        <i class="fa-brands fa-css3-alt"></i>
-
-                    </div>
-                    <p><i>landing page para banda de rock <br>
-                            Diseño y maquetación web (Dos versiones)</i><br>
-                    </p>
-
-                    <div class="btn-card">
-                        <a href="https://github.com/CamilaPaladino/Zapadie-Landing" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://zapadie-rock-v1.netlify.app/" target="_blank">Sitio Web (v1)</a>
-                        <a href="https://zapadie-rock-v2.netlify.app/" target="_blank">Sitio Web (v2)</a>
-                    </div>
+    
+                    <div class="contImg  col-lg-6 col-md-6 col-sm-12">
+                        <a href="https://www.intraprode.com.ar/" target="_blank">
+                            <img class="imgCard" src="assets/images/intraprode.png" alt="">
+                        </a>
+                    </div>            
+    
                 </div>
             </div>
-            <div class="card card2" data-aos="fade-botton">
-                <div class="descrip-card">
-                    <h4>LA CRUDA PODCAST </h4>
-                    <div class="tools">
-                        <i class="fa-brands fa-html5"></i>
-                        <i class="fa-brands fa-css3-alt"></i>
+            <div class="card card02" data-aos="fade-right">
+                <div class="row w-100 m-0">    
+                    <div class="contImg  col-lg-6 col-md-6 col-sm-12">
+                        <a href="https://www.embajadoresnat.com/" target="_blank">
+                            <img class="imgCard" src="assets/images/ledesma.png" alt="">
+                        </a>
+                    </div>            
+                    <div class="descrip-card col-lg-6 col-md-6 col-sm-12">
+                        <h4>LANDING PAGE<br>LEDESMA NAT</h4>
+                        <div class="tools">
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-bootstrap"></i>
+                            <i class="fa-brands fa-css3-alt"></i>
+                        </div>
+                        <p>Maquetación web responsive para concurso organizado por Ledesma Nat. <br>*Diseño y contenidos by Naiades</p>
+                        <a class="btn-card" href="https://www.embajadoresnat.com/" target="_blank">Sitio Web</a>
                     </div>
-                    <p><i>Reto para programa Summerhack 2022. Landing page para un podcast. <br>
-                            Diseño y maquetación web, metadatos y Schemas <br></i>
-                    </p>
 
-                    <div class="btn-card">
-                        <a href="https://github.com/CamilaPaladino/Desafio-SummerHack-22" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://lacruda-podcast.netlify.app/" target="_blank">Sitio Web</a>
-                    </div>
-                </div>
-                <div class="contImg">
-                    <img class="imgCard" src="assets/lacruda.png" alt="">
-                </div>            
-            </div>
-            <div class="card card1" data-aos="fade-botton">
-                <div class="contImg">
-                    <img class="imgCard" src="assets/applist.png" alt="">
-                </div>
-
-                <div class="descrip-card">
-                    <h4>APP LIST </h4>
-                    <div class="tools">
-                        <i class="fa-brands fa-js"></i>
-                        <i class="fa-brands fa-html5"></i>
-                        <i class="fa-brands fa-css3-alt"></i>
-                    </div>
-                    <p><i>App de Lista de compras realizada en el marco del SummerHack. First Mobile <br></i>
-                    </p>
-
-                    <div class="btn-card">
-                        <a href="https://github.com/CamilaPaladino/App-list" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://applist-summer.netlify.app/" target="_blank">Sitio Web</a>
-                    </div>
                 </div>
             </div>
-            <div class="card card2" data-aos="fade-botton">
-                <div class="descrip-card">
-                    <h4>DISNEY+ CLON </h4>
-                    <div class="tools">
-                        <i class="fa-brands fa-html5"></i>
-                        <i class="fa-brands fa-css3-alt"></i>
+            <div class="card" data-aos="fade-left">
+                <div class="row w-100 m-0">
+                    <div class="descrip-card col-lg-6 col-md-6 col-sm-12">
+                        <h4>DASHBOARD<br>APP CULTIVO</h4>
+                        <div class="tools">
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-css3-alt"></i>
+                            <i class="fa-brands fa-js-square"></i>
+                        </div>
+                        <p>Diseño, maquetación y Desarrollo de Dashboard para App de Cultivo.</p>
+                        <a class="btn-card" href="https://www.behance.net/gallery/144889393/Dashboard-App-para-Cultivo" target="_blank"><i class="fa-brands fa-behance"></i></a>
                     </div>
-                    <p><i>Reto para programa Summerhack 2022. Copia de la página original de Disney+. Incluyendo sus imágenes, tipografías y adaptaciones responsive a los diferentes dispositivos. <br></i>
-                    </p>
-
-                    <div class="btn-card">
-                        <a href="https://github.com/CamilaPaladino/Disney-clon" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://cami-summerhack.web.app/reto4/index.html" target="_blank">Sitio Web</a>
-                    </div>
+    
+                    <div class="contImg  col-lg-6 col-md-6 col-sm-12">
+                        <a href="https://www.behance.net/gallery/144889393/Dashboard-App-para-Cultivo" target="_blank">
+                            <img class="imgCard" src="assets/images/dashboard.png" alt="">
+                        </a>
+                    </div>            
+    
                 </div>
-                <div class="contImg">
-                    <img class="imgCard" src="assets/disney+.png" alt="">
+            </div>
+            <div class="card card02" data-aos="fade-right">
+                <div class="row w-100 m-0">    
+                    <div class="contImg  col-lg-6 col-md-6 col-sm-12">
+                        <a href="http://beautygroup.biz/" target="_blank">
+                            <img class="imgCard" src="assets/images/bg-group.png" alt="">
+                        </a>
+                    </div>            
+                    <div class="descrip-card col-lg-6 col-md-6 col-sm-12">
+                        <h4>LANDING PAGE<br>BEAUTY GROUP</h4>
+                        <div class="tools">
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-bootstrap"></i>
+                            <i class="fa-brands fa-css3-alt"></i>
+                        </div>
+                        <p>Maquetación de landing page para Beauty Group. <br>
+                            *Diseño y contenidos by Beauty Group</p>
+                        <a class="btn-card" href="http://beautygroup.biz/" target="_blank">Sitio Web</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card" data-aos="fade-left">
+                <div class="row w-100 m-0">    
+                    <div class="descrip-card col-lg-6 col-md-6 col-sm-12">
+                        <h4>LANDING PAGE<br>ZAPADIE ROCK</h4>
+                        <div class="tools">
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-bootstrap"></i>
+                            <i class="fa-brands fa-css3-alt"></i>
+                        </div>
+                        <p>landing page para banda de rock <br>
+                            Diseño y maquetación web.</p>
+                        <a class="btn-card" href="https://zapadierock.com/" target="_blank">Sitio Web</a>
+                    </div>
+                    <div class="contImg  col-lg-6 col-md-6 col-sm-12">
+                        <a href="https://zapadierock.com/" target="_blank">
+                            <img class="imgCard" src="assets/images/zapadie.png" alt="">
+                        </a>
+                    </div>            
+
+                </div>
+            </div>
+            <div class="card card02" data-aos="fade-right">
+                <div class="row w-100 m-0">    
+                    <div class="contImg  col-lg-6 col-md-6 col-sm-12">
+                        <a href="https://www.onderhoud.com.ar/" target="_blank">
+                            <img class="imgCard" src="assets/images/onderhoud.png" alt="">
+                        </a>
+                    </div>            
+                    <div class="descrip-card col-lg-6 col-md-6 col-sm-12">
+                        <h4>SITIO WEB<br>ONDERHOUD SRL</h4>
+                        <div class="tools">
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-bootstrap"></i>
+                            <i class="fa-brands fa-css3-alt"></i>
+                        </div>
+                        <p>Diseño y maquetación de sitio web para empresa de mantenimiento edilicio.</p>
+                        <a class="btn-card" href="https://www.onderhoud.com.ar/" target="_blank">Sitio Web</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card" data-aos="fade-left">
+                <div class="row w-100 m-0">    
+                    <div class="descrip-card col-lg-6 col-md-6 col-sm-12">
+                        <h4>DISNEY+ CLON </h4>
+                        <div class="tools">
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-bootstrap"></i>
+                            <i class="fa-brands fa-css3-alt"></i>
+                        </div>
+                        <p>Reto para programa Summerhack. Copia de la página original de Disney+. Incluyendo sus imágenes, tipografías y adaptaciones responsive a los diferentes dispositivos. </p>
+                        <a class="btn-card" href="https://cami-summerhack.web.app/reto4/index.html" target="_blank">Sitio Web</a>
+                    </div>
+                    <div class="contImg  col-lg-6 col-md-6 col-sm-12">
+                        <a href="https://cami-summerhack.web.app/reto4/index.html" target="_blank">
+                            <img class="imgCard" src="assets/images/disney+.png" alt="">
+                        </a>
+                    </div>            
+
                 </div>
             </div>
         </section>
-        <h2 class="titulo" >CONTACTO</h2>
-        <footer id="contacto" >
-            <div class="form">
-                <form id="form">
-                    <label>Nombre</label>
-                    <input id="nombre" type="text" name="name">
-                    <label>Email</label>
-                    <input id="email" type="email" name="email">
-                    <label>Mensaje</label>
-                    <textarea id="mensaje" name="message"></textarea>
-                    <input type="submit" id="button" class="btn" value="ENVIAR MENSAJE" >
-                    <p id="mensajeEnviado" style="display: none;">Ya me llegó tu mensaje, pronto leerás mi respuesta!</p>
-                    <p id="validacion" style="display: none;">*Debes completar todos los campos</p>
+        <section class="contacto">
+            <div class="row m-0 w-100">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h2 class="titulares">Contactame</h2>
+                    <form target="_blank" action="https://formsubmit.co/camilapaladinoblees@gmail.com" method="POST" class="speaker-form">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Email" required>
+                        </div>
 
-                </form>
-                <script type="text/javascript"
-                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-                <script type="text/javascript">emailjs.init('QpNloy9L8kNUVcRLJ')</script>
+                        <div class="form-group">
+                            <textarea placeholder="Tu mensaje acá" class="form-control" name="message" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-lg btn-dark btn-block">ENVIAR</button>
+                    </form>
+        
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 info">
+                    <h3>Seguime </h3>
+                    <div class="links">
+                        <a href="https://www.linkedin.com/in/camila-paladino-/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+                        <a href="https://github.com/CamilaPaladino" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM265.8 407.7c0-1.8 0-6 .1-11.6c.1-11.4 .1-28.8 .1-43.7c0-15.6-5.2-25.5-11.3-30.7c37-4.1 76-9.2 76-73.1c0-18.2-6.5-27.3-17.1-39c1.7-4.3 7.4-22-1.7-45c-13.9-4.3-45.7 17.9-45.7 17.9c-13.2-3.7-27.5-5.6-41.6-5.6s-28.4 1.9-41.6 5.6c0 0-31.8-22.2-45.7-17.9c-9.1 22.9-3.5 40.6-1.7 45c-10.6 11.7-15.6 20.8-15.6 39c0 63.6 37.3 69 74.3 73.1c-4.8 4.3-9.1 11.7-10.6 22.3c-9.5 4.3-33.8 11.7-48.3-13.9c-9.1-15.8-25.5-17.1-25.5-17.1c-16.2-.2-1.1 10.2-1.1 10.2c10.8 5 18.4 24.2 18.4 24.2c9.7 29.7 56.1 19.7 56.1 19.7c0 9 .1 21.7 .1 30.6c0 4.8 .1 8.6 .1 10c0 4.3-3 9.5-11.5 8C106 393.6 59.8 330.8 59.8 257.4c0-91.8 70.2-161.5 162-161.5s166.2 69.7 166.2 161.5c.1 73.4-44.7 136.3-110.7 158.3c-8.4 1.5-11.5-3.7-11.5-8zm-90.5-54.8c-.2-1.5 1.1-2.8 3-3.2c1.9-.2 3.7 .6 3.9 1.9c.3 1.3-1 2.6-3 3c-1.9 .4-3.7-.4-3.9-1.7zm-9.1 3.2c-2.2 .2-3.7-.9-3.7-2.4c0-1.3 1.5-2.4 3.5-2.4c1.9-.2 3.7 .9 3.7 2.4c0 1.3-1.5 2.4-3.5 2.4zm-14.3-2.2c-1.9-.4-3.2-1.9-2.8-3.2s2.4-1.9 4.1-1.5c2 .6 3.3 2.1 2.8 3.4c-.4 1.3-2.4 1.9-4.1 1.3zm-12.5-7.3c-1.5-1.3-1.9-3.2-.9-4.1c.9-1.1 2.8-.9 4.3 .6c1.3 1.3 1.8 3.3 .9 4.1c-.9 1.1-2.8 .9-4.3-.6zm-8.5-10c-1.1-1.5-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3c1.1 1.5 1.1 3.3 0 4.1c-.9 .6-2.6 0-3.7-1.5zm-6.3-8.8c-1.1-1.3-1.3-2.8-.4-3.5c.9-.9 2.4-.4 3.5 .6c1.1 1.3 1.3 2.8 .4 3.5c-.9 .9-2.4 .4-3.5-.6zm-6-6.4c-1.3-.6-1.9-1.7-1.5-2.6c.4-.6 1.5-.9 2.8-.4c1.3 .7 1.9 1.8 1.5 2.6c-.4 .9-1.7 1.1-2.8 .4z"/></svg></a>
+                        <a href="https://www.behance.net/camilapaladino" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M155.3 318.4c17.2 0 31.2-6.1 31.2-25.4c0-19.7-11.7-27.4-30.3-27.5h-46v52.9h45.1zm-5.4-129.6H110.3v44.8H153c15.1 0 25.8-6.6 25.8-22.9c0-17.7-13.7-21.9-28.9-21.9zm129.5 74.8h62.2c-1.7-18.5-11.3-29.7-30.5-29.7c-18.3 0-30.5 11.4-31.7 29.7zM384 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zM349.5 185H271.7V166.1h77.8V185zM193.7 243.7c23.6 6.7 35 27.5 35 51.6c0 39-32.7 55.7-67.6 55.9H68v-192h90.5c32.9 0 61.4 9.3 61.4 47.5c0 19.3-9 28.8-26.2 37zm118.7-38.6c43.5 0 67.6 34.3 67.6 75.4c0 1.6-.1 3.3-.2 5c0 .8-.1 1.5-.1 2.2H279.5c0 22.2 11.7 35.3 34.1 35.3c11.6 0 26.5-6.2 30.2-18.1h33.7c-10.4 31.9-31.9 46.8-65.1 46.8c-43.8 0-71.1-29.7-71.1-73c0-41.8 28.7-73.6 71.1-73.6z"/></svg></a>    
+                    </div>
+                    <a href="mailto:camilapaladinoblees@gmail.com?subject=Tengo%20una%20propuesta%20para%20vos">camilapaladinoblees@gmail.com</a>
+                    <p>11 7365-3770</p>
+                </div>
+    
             </div>
-            <div class="contacto">
-                <h3>Seguime </h3>
-                <a href="https://www.linkedin.com/in/camila-paladino-/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/CamilaPaladino" target="_blank"><i class="fa-brands fa-github-square"></i></a>
-                <a href="https://www.behance.net/camilapaladino" target="_blank"><i class="fa-brands fa-behance-square"></i></a>
-            </div>
-            <div>
-                <h3 class="mailto">Escribime a <a href="mailto:camilapaladinoblees@gmail.com?subject=Tengo%20una%20propuesta%20para%20vos">camilapaladinoblees@gmail.com</a><br>
-                11 7365-3770</h3>
-            </div>
+        </section>
+        <footer>
+            <a href="https://www.linkedin.com/in/camila-paladino-/" target="_blank">© 2024 - Camila Paladino</a>
         </footer>
-        <div class="final">
-            <a href="https://www.linkedin.com/in/camila-paladino-/" target="_blank">© 2023 - Camila Paladino</a>
-        </div>
 
 
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script> AOS.init({
-                offset: 80,
-                delay: 0,
-                duration: 800
-            });
-        </script>
-        <script src="script.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="js/custom.js"></script>
     </body>
 </html>
